@@ -17,6 +17,9 @@ import java.util.Map;
 public class DummyContent extends Item {
     public DummyContent() {
         super("dummy_item");
+        hidden = true;
+        hideDetails = true;
+        description = "Used by [#00ffaa]TealShard[] to change colors of blocks *without* crashing arc due to a [#dd0000]SegFault[]";
     }
 
     @Override
