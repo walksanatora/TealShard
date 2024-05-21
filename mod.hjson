@@ -1,14 +1,7 @@
-#the mod name as displayed in-game
-displayName: "Teal Sharded"
-
 #the internal name of your mod
 name: "teal-shard"
-
-#your name
+displayName: "[#00ffaa]Teal Sharded[]"
 author: "Walksanator"
-
-#the fully qualified main class of the mod
-main: "walksanator.tealshard.TealShard"
 
 #the mod description as seen in the mod dialog
 description: "makes sharded teal (00FFAA)"
@@ -19,5 +12,9 @@ version: 1.0
 #the minimum game build required to run this mod
 minGameVersion: 145
 
+#client-side color changes do not constitute illegality
+hidden: true
+
 #this is a java mod
 java: true
+main: "walksanator.tealshard.TealShard"
