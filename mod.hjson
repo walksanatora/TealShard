@@ -12,8 +12,6 @@ version: 1.0
 #the minimum game build required to run this mod
 minGameVersion: 145
 
-#client-side color changes do not constitute illegality
-hidden: true
 
 #this is a java mod
 java: true

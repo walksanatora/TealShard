@@ -4,8 +4,12 @@ package walksanator.tealshard;
 import arc.Core;
 import arc.Events;
 import arc.graphics.Color;
+import arc.struct.Seq;
 import arc.util.Log;
 import arc.util.Time;
+import mindustry.Vars;
+import mindustry.ctype.Content;
+import mindustry.ctype.UnlockableContent;
 import mindustry.game.EventType;
 import mindustry.game.Team;
 import mindustry.mod.Mod;
@@ -14,6 +18,8 @@ import mindustry.ui.dialogs.BaseDialog;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
+
+import static mindustry.Vars.content;
 
 
 public class TealShard extends Mod {
@@ -57,21 +63,9 @@ public class TealShard extends Mod {
             setField(shard,paletti_field,palettei);
         }
 
-//        Events.on(EventType.ContentInitEvent.class, e -> {
-//            TextureGenerator.changeHue(
-//                    Core.atlas.find("core-acropolis-team-sharded"),
-//                    160
-//            );
-//
-//            TextureGenerator.recolor(
-//                    Core.atlas.find("core-nucleus-team"),
-//                    Core.atlas.find("core-nucleus-team-sharded"),
-//                    Team.sharded.color
-//            );
-//        });
-
         //listen for game load event
         Events.on(EventType.ClientLoadEvent.class, e -> {
+            Vars.mods.getMod(this.getClass()).meta.hidden = true;
 
             //show dialog upon startup
             Time.runTask(10f, () -> {
@@ -88,6 +82,7 @@ public class TealShard extends Mod {
     @Override
     public void loadContent(){
         stopgap = new DummyContent();
+
     }
 
 }

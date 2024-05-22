@@ -7,6 +7,7 @@ import arc.math.geom.Rect;
 import arc.struct.OrderedMap;
 import arc.struct.Seq;
 import arc.util.Log;
+import mindustry.Vars;
 import mindustry.game.Team;
 import mindustry.graphics.MultiPacker;
 import mindustry.type.Item;
@@ -19,11 +20,12 @@ public class DummyContent extends Item {
         super("dummy_item");
         hidden = true;
         hideDetails = true;
-        description = "Used by [#00ffaa]TealShard[] to change colors of blocks *without* crashing arc due to a [#dd0000]SegFault[]";
+        buildable = false;
     }
 
     @Override
     public void createIcons(MultiPacker packer) {
+        Log.warn("replacing sharded textures");
         super.createIcons(packer);
         final int[] i = {0};
 
