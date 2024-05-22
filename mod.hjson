@@ -12,7 +12,6 @@ version: 1.0
 #the minimum game build required to run this mod
 minGameVersion: 145
 
-
 #this is a java mod
 java: true
 main: "walksanator.tealshard.TealShard"
